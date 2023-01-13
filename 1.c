@@ -1,15 +1,22 @@
 #include<stdio.h>
-int main() {
-int i,n;
-printf("Enter the number of elements \n");
-scanf("%d",&n);
-int a[n];
-for(i=0;i<n;i++) {
-printf("enter element %d:",i+1);
-scanf("%d",&a[i]);  }
-printf("Entered elements are : ");
-for(i=0;i<n;i++) {
-printf("%d ",a[i]);}
-return 0;
-}
 
+int main(){
+    int i,j,n,rows,columns;
+    int a[20][20];
+    printf("Enter the value of rows and columns\n");
+    scanf("%d%d",&rows,&columns);
+    for(i=0;i<rows;i++){
+        for(j=0;j<columns;j++){
+            printf("Enter element [%d][%d]",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Matrix in tabular form :\n");
+        for(i=0;i<rows;i++){
+        for(j=0;j<columns;j++){
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+     return 0;
+}
